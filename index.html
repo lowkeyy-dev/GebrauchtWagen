@@ -124,13 +124,13 @@
     }
 
     function createHearts() {
-        for (let i = 0; i < 40; i++) {
+        for (let i = 0; i < 100; i++) {
             let heart = document.createElement("div");
             heart.classList.add("heart");
             heart.innerHTML = "💕";
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-            heart.style.fontSize = (14 + Math.random() * 30) + "px";
+            heart.style.fontSize = (40 + Math.random() * 80) + "px";
 
             document.body.appendChild(heart);
 
