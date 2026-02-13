@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -33,11 +34,10 @@
         }
 
         h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 58px;
-        letter-spacing: 2px;
-        color: #ff3366;
-    }
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    color: #ff3366;
+}
 
 
 
@@ -99,7 +99,8 @@
 <body>
 
     <div class="card">
-        <h1>С 14 февраля моя детка 😋😘❤️</h1>
+        <h1>С 14 февраля моя детка 
+                    😋❤️</h1>
         <p>
             Моя кися😻, <br>
             Поздравляю тебя с днем всех влюбленных (нас 😋🥰🥰),
@@ -118,19 +119,25 @@
 
     <script>
         function showSurprise() {
-            document.getElementById("surprise").style.display = "block";
-        }
+        document.getElementById("surprise").style.display = "block";
+        createHearts();
+    }
 
-        // Fliegende Herzen
-        for (let i = 0; i < 30; i++) {
+    function createHearts() {
+        for (let i = 0; i < 40; i++) {
             let heart = document.createElement("div");
             heart.classList.add("heart");
-            heart.innerHTML = "💕";
+            heart.innerHTML = "❤️";
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = (4 + Math.random() * 4) + "s";
             heart.style.fontSize = (14 + Math.random() * 30) + "px";
+
             document.body.appendChild(heart);
+
+            // Entfernt Herz nach Animation → bessere Performance
+            setTimeout(() => heart.remove(), 8000);
         }
+    }
     </script>
 
 </body>
